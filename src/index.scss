@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  --black: #04152d;
+  --black2: #041226;
+  --black3: #020c1b;
+  --black-lighter: #1c4b91;
+  --black-light: #173d77;
+  --orange: #f89e00;
+  --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+}
+
+
+
+@mixin sm {
+  @media only screen and (min-width: 640px) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: 768px) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: 1024px) {
+      @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: 1280px) {
+      @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (min-width: 1536px) {
+      @content;
+  }
+}
+
+@mixin ellipsis($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
